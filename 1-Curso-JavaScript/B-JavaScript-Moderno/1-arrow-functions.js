@@ -14,7 +14,7 @@ const personas = [
   { nombre: "Sofía", edad: 19 },
 ];
 
-console.log(saludar("Ana"));
+console.log(saludar("eric"));
 console.log("5 + 3 =", sumar(5, 3));
 console.log("Duplicados:", duplicarNumeros(numeros));
 console.log("Nombres:", obtenerNombres(personas));

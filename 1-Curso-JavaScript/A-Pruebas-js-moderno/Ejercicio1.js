@@ -7,4 +7,4 @@ let nota2 = 80;
 let nota3 = 70;
 let nota4 = 60;
 let promedio = (nota1 + nota2 + nota3 + nota4) / 4;
-document.writeln(`El estudiante ${nombre} obtuvo una nota final de: ${promedio}`)
+console.log(`El estudiante ${nombre} obtuvo una nota final de: ${promedio}`)

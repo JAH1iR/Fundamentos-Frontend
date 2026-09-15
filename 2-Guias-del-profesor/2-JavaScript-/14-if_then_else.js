@@ -58,7 +58,7 @@ function verificarEdad() {
                 calificacion = "F - Insuficiente";
             }
             
-            resultado.innerHTML = `✓ Tu calificación: ${calificacion}`;
+            resultado.innerHTMLstyle = `Tu calificación: ${calificacion}`;
             resultado.style.display = "block";
         }
 

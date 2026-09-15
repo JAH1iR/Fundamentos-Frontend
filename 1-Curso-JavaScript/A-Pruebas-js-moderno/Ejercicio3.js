@@ -10,7 +10,7 @@ let producto = {
     requiere_receta: true
 };
 // Accedemos a los datos usando el punto (.) o corchetes ['']
-document.writeln(`<strong>Información del Producto:</strong><br>`);
-document.writeln(`El producto ${producto.nombre} cuesta $${producto.precio} y quedan ${producto.stock} unidades en existencia.`);
-document.writeln('<br>');
-document.writeln(`¿Requiere receta médica?: ${producto.requiere_receta ? 'Sí, es obligatorio' : 'No, es de venta libre'}`);
+console.log(`<strong>Información del Producto:</strong><br>`);
+console.log(`El producto ${producto.nombre} cuesta ${producto.precio} y quedan ${producto.stock} unidades en existencia.`);
+
+console.log(`¿Requiere receta médica?: ${producto.requiere_receta ? 'Sí, es obligatorio' : 'No, es de venta libre'}`);

@@ -9,12 +9,12 @@ Extra: Usa el operador de identidad estricta (===) para verificar si el promedio
 let miIndice = 0.0;
 miIndice = parseFloat(prompt('ingrese su indice: '));
 if (miIndice >= 1.0){
-    document.writeln(`<strong>Matrícula permitida</strong>`);
+    console.log(`<strong>Matrícula permitida</strong>`);
 }
 else {
-    document.writeln(`<strong>Debe acudir a consejería académica</strong>`);
+    console.log(`<strong>Debe acudir a consejería académica</strong>`);
 }
 
 if (miIndice === 3.0){
-    document.writeln(`<br><strong>¡Felicidades, promedio perfecto!</strong>`);
+    console.log(`<br><strong>¡Felicidades, promedio perfecto!</strong>`);
 }

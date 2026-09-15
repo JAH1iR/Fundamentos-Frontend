@@ -1,9 +1,9 @@
 function verificarDocumentos() {
             let tieneCedula = document.getElementById("cedula").value === "true";
-            let tieneP asaporte = document.getElementById("pasaporte").value === "true";
+            let tienePasaporte = document.getElementById("pasaporte").value === "true";
             let resultado = document.getElementById("resultado1");
             
-            if (tieneCedula || tieneP asaporte) {
+            if (tieneCedula || tienePasaporte) {
                 resultado.innerHTML = "✓ Puedes entrar";
             } else {
                 resultado.innerHTML = "✗ Necesitas cédula o pasaporte";

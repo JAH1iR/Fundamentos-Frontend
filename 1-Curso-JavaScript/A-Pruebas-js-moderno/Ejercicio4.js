@@ -9,5 +9,5 @@ let datosEstudiante = {
  semestre : 2026,
  estaInscrito: true
 }
-document.writeln(`El estudiante ${datosEstudiante.nombre}, de la facultad ${datosEstudiante.facultad}. Año: ${datosEstudiante.semestre}. ¿Inscrito?: ${datosEstudiante.estaInscrito ? 'Sí, esta inscrito' : 'No, por favor matricularse lo antes posible'}`);
-document.writeln('<br>');
+console.log(`El estudiante ${datosEstudiante.nombre}, de la facultad ${datosEstudiante.facultad}. Año: ${datosEstudiante.semestre}. ¿Inscrito?: ${datosEstudiante.estaInscrito ? 'Sí, esta inscrito' : 'No, por favor matricularse lo antes posible'}`);
+console.log('<br>');

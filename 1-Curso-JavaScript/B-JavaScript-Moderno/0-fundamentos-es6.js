@@ -11,8 +11,8 @@ function sumar(primerNumero, segundoNumero) {
 }
 
 const estudiante = {
-  nombre: "Ana",
-  edad: 21,
+  nombre: "Eric",
+  edad: 22,
   activo: true,
 };
 
