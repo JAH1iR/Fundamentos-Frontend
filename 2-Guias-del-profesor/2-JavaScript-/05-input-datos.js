@@ -1,15 +1,13 @@
-let nombre, edad, direccion, telefono, correo;
-        nombre = prompt('Ingrese su nombre: ');
-        edad = prompt('Ingrese su edad: ');
-        direccion = prompt('Ingrese su dirección: ');
-        telefono = prompt('Ingrese su teléfono: ');
-        correo = prompt('Ingrese su correo electrónico: ');
-        document.writeln('Nombre: ' + nombre);
-        document.writeln('<br>');
-        document.writeln('Edad :' + edad);
-        document.writeln('<br>');
-        document.writeln('Dirección: ' + direccion);
-        document.writeln('<br>');
-        document.writeln('Teléfono :' + telefono);
-        document.writeln('<br>');
-        document.writeln('Correo Electrónico :' + correo);
+const datos = {
+  nombre: 'Carlos',
+  edad: 28,
+  direccion: 'Calle Siempre Viva 123',
+  telefono: '+52 555 123 4567',
+  correo: 'carlos@ejemplo.com',
+};
+
+console.log('Nombre:', datos.nombre);
+console.log('Edad:', datos.edad);
+console.log('Dirección:', datos.direccion);
+console.log('Teléfono:', datos.telefono);
+console.log('Correo Electrónico:', datos.correo);

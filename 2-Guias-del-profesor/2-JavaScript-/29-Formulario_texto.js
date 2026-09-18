@@ -1,14 +1,17 @@
 let control = 0;
-        let contrasena = 'acceso2026';
-        function verificar(){
-            let varclave = document.getElementById('clave').value;
-            if(varclave !=contrasena || varclave == ""){
-                alert('ERROR, clave incorrecta o Vacia, intente nuevamente');
-                control++
-                if(control >= 3){
-                    alert('INTENTOS AGOTADOS, Acceso BLOQUEADO - Contactar a Soporte Técnico');
-                }
-            }else{
-                window.open("http://www.google.com");
-            }
-        }
+const contrasena = 'acceso2026';
+
+function verificar() {
+  const varclave = document.getElementById('clave')?.value ?? '';
+
+  if (varclave !== contrasena || varclave === '') {
+    control += 1;
+    console.log('ERROR: clave incorrecta o vacía, intente nuevamente');
+
+    if (control >= 3) {
+      console.log('INTENTOS AGOTADOS: Acceso BLOQUEADO - Contactar a Soporte Técnico');
+    }
+  } else {
+    console.log('Acceso correcto. Redirigiendo...');
+  }
+}

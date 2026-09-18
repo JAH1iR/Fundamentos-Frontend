@@ -1,122 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>59 - Promesas</title>
+    <title>59 asincrona promesas</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 11px;
+            white-space: pre-wrap;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
-        }
-        button {
-            padding: 8px 12px;
-            margin: 5px;
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>59 - Promesas en JavaScript</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es una Promesa?</h2>
-            <p>Una promesa representa el resultado eventual de una operación asincrónica.</p>
-            <p><strong>Estados:</strong></p>
-            <ul>
-                <li><strong>Pending (Pendiente):</strong> La operación está en progreso</li>
-                <li><strong>Fulfilled (Resuelta):</strong> La operación se completó exitosamente</li>
-                <li><strong>Rejected (Rechazada):</strong> La operación falló</li>
-            </ul>
-        </div>
+    <div class="contenedor">
+        <h1>59 asincrona promesas</h1>
+        <p>Las promesas permiten manejar tareas asíncronas de forma más legible que callbacks anidados.</p>
 
         <div class="ejemplo">
-            <h2>Sintaxis básica</h2>
-            <div class="codigo">
-new Promise((resolve, reject) => {
-    if (condición) {
-        resolve("Éxito");  // Promesa resuelta
-    } else {
-        reject("Error");   // Promesa rechazada
-    }
-})
-.then(resultado => console.log(resultado))
-.catch(error => console.error(error));
-            </div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>Promise.resolve("OK").then(console.log);</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 1: Promesa simple</h2>
-            <button onclick="ejemplo1()">Ver Promesa</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Promesa con éxito/error</h2>
-            <button onclick="ejemplo2Exito()">Promesa Exitosa</button>
-            <button onclick="ejemplo2Error()">Promesa Fallida</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Encadenar promesas (.then().then())</h2>
-            <button onclick="ejemplo3()">Ver Cadena de Promesas</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ventajas sobre Callbacks</h2>
-            <p>✓ Código más legible</p>
-            <p>✓ Mejor manejo de errores</p>
-            <p>✓ Evita el "callback hell"</p>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/59-asincrona_promesas.js"></script>

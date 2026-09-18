@@ -1,4 +1,4 @@
 function saludos() {
-            //alert('BUENOS DIAS A TODOS');
-            swal('BUENOS DIAS A TODOS');
-        }
+  console.log('BUENOS DIAS A TODOS');
+  swal('BUENOS DIAS A TODOS');
+}

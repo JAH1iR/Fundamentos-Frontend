@@ -1,121 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>58 - Callbacks</title>
+    <title>58 asincrona callBacks</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 11px;
+            white-space: pre-wrap;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
-        }
-        button {
-            padding: 8px 12px;
-            margin: 5px;
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>58 - Callbacks (Funciones como parámetros)</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es un Callback?</h2>
-            <p>Un callback es una función pasada como parámetro a otra función, para ser ejecutada después.</p>
-            <div class="codigo">
-function operacion(a, b, callback) {
-    const resultado = a + b;
-    callback(resultado);  // Ejecutar el callback
-}
-
-operacion(5, 3, function(res) {
-    console.log("Resultado: " + res);
-});
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>58 asincrona callBacks</h1>
+        <p>Los callbacks permiten ejecutar funciones después de un evento o tarea asíncrona.</p>
 
         <div class="ejemplo">
-            <h2>Ejemplo 1: Callback simple</h2>
-            <button onclick="ejemplo1()">Ver Callback</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>setTimeout(() => console.log("Tarea completada"), 1000);</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Callback con setTimeout</h2>
-            <p>El callback se ejecuta después de que pase el tiempo</p>
-            <button onclick="ejemplo2()">Esperar 2 segundos (espera 2s)</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Callbacks anidados</h2>
-            <button onclick="ejemplo3()">Ver Anidamiento (espera 3s)</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>El problema "Callback Hell"</h2>
-            <p>Cuando los callbacks se aniданan demasiado, el código es difícil de leer:</p>
-            <div class="codigo">
-operacion1(function(res1) {
-    operacion2(res1, function(res2) {
-        operacion3(res2, function(res3) {
-            operacion4(res3, function(res4) {
-                console.log(res4);
-            });
-        });
-    });
-});  // Pirámide de doom 😱
-            </div>
-            <p><strong>Solución:</strong> Usar Promesas o Async/Await (más legible)</p>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/58-asincrona_callBacks.js"></script>

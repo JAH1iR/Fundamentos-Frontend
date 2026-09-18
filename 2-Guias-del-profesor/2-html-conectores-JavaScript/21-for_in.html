@@ -1,179 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>21 - Ciclo For-In</title>
+    <title>21 for in</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 12px;
-        }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
             white-space: pre-wrap;
-            font-family: monospace;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        button {
-            padding: 8px 12px;
-            margin: 5px;
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>21 - Ciclo For-In</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es For-In?</h2>
-            <p>For-In es un ciclo que itera sobre las PROPIEDADES (llaves) de un objeto o arreglo.</p>
-            <div class="codigo">
-for (let clave in objeto) {
-    // clave contiene el nombre de la propiedad
-    // objeto[clave] accede al valor
-}
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>21 for in</h1>
+        <p>for...in recorre propiedades de un objeto, útil para recorrer estructuras de datos.</p>
 
         <div class="ejemplo">
-            <h2>Ejemplo 1: Recorrer propiedades de un objeto</h2>
-            <div class="codigo">
-let persona = {
-    nombre: "Juan",
-    edad: 30,
-    ciudad: "Madrid"
-};
-
-for (let propiedad in persona) {
-    console.log(propiedad + ": " + persona[propiedad]);
-}
-// Salida:
-// nombre: Juan
-// edad: 30
-// ciudad: Madrid
-            </div>
-            <button onclick="recorrerObjeto()">Ver Objeto</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>const persona = { nombre: "Ana", edad: 21 }; for (const clave in persona) console.log(clave, persona[clave]);</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Recorrer elementos de un arreglo</h2>
-            <div class="codigo">
-let colores = ["rojo", "azul", "verde"];
-
-for (let indice in colores) {
-    console.log(indice + ": " + colores[indice]);
-}
-// Salida:
-// 0: rojo
-// 1: azul
-// 2: verde
-            </div>
-            <button onclick="recorrerArreglo()">Ver Arreglo</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Auto (objeto con múltiples propiedades)</h2>
-            <div class="codigo">
-let auto = {
-    marca: "Toyota",
-    modelo: "Corolla",
-    año: 2022,
-    color: "gris",
-    velocidadMaxima: 180
-};
-
-for (let atributo in auto) {
-    console.log(atributo + ": " + auto[atributo]);
-}
-            </div>
-            <button onclick="recorrerAuto()">Ver Auto</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 4: Arreglo de objetos</h2>
-            <div class="codigo">
-let estudiantes = [
-    { nombre: "Ana", nota: 85 },
-    { nombre: "Bob", nota: 90 },
-    { nombre: "Carlos", nota: 78 }
-];
-
-for (let i = 0; i < estudiantes.length; i++) {
-    for (let propiedad in estudiantes[i]) {
-        console.log(propiedad + ": " + estudiantes[i][propiedad]);
-    }
-    console.log("---");
-}
-            </div>
-            <button onclick="recorrerEstudiantes()">Ver Estudiantes</button>
-            <div id="resultado4" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Diferencia: For-In vs For normal</h2>
-            <p><strong>For:</strong> itera sobre índices (0, 1, 2...)</p>
-            <p><strong>For-In:</strong> itera sobre propiedades (claves del objeto)</p>
-            <div class="codigo">
-let frutas = ["manzana", "plátano", "naranja"];
-
-// For normal
-for (let i = 0; i < frutas.length; i++) {
-    console.log(i, frutas[i]); // índice y valor
-}
-
-// For-In
-for (let indice in frutas) {
-    console.log(indice, frutas[indice]); // similar pero diferente
-}
-            </div>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/21-for_in.js"></script>

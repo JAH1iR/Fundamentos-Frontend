@@ -1,19 +1,15 @@
-let texto1 = 'javascript';
-        let texto2 = "javascript";
-        let texto3 = 'Esa es "la verdad" de todo'; 
-        
-        let texto4 = 'Esto es una cadena muy larga que '+'<br>'+'necesita que dividamos en varias lineas de lo '+'<br>'+'contrario el texto es ilegible';
-        
-        let texto5 = 'Esto es una cadena muy larga que \ necesita que dividamos en varias lineas de lo \ contrario el texto es ilegible';
+const texto1 = 'javascript';
+const texto2 = 'javascript';
+const texto3 = 'Esa es "la verdad" de todo';
 
-        document.writeln(texto1);
-        document.writeln('<br>');
-        document.writeln(texto2);
-        document.writeln('<br>');
-        document.writeln(texto3);
-        document.writeln('<br>');
-        document.writeln(texto4);
-        document.writeln('<br>');
-        document.writeln('<br>');
-        document.writeln(texto5);
-        document.writeln('<br>');
+const texto4 = 'Esto es una cadena muy larga que ' +
+  'necesita que dividamos en varias líneas para que sea más legible';
+
+const texto5 = 'Esto es una cadena muy larga que ' +
+  'también se puede unir con concatenación para mejorar la lectura';
+
+console.log(texto1);
+console.log(texto2);
+console.log(texto3);
+console.log(texto4);
+console.log(texto5);

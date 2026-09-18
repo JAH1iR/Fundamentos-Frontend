@@ -1,166 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>18 - Ciclo While</title>
+    <title>18 while</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 12px;
-        }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
             white-space: pre-wrap;
-            font-family: monospace;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        input, button {
-            padding: 8px 12px;
-            margin: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>18 - Ciclo While</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es un ciclo While?</h2>
-            <p>Un ciclo while repite un bloque de código mientras una condición sea verdadera.</p>
-            <div class="codigo">
-while (condición) {
-    // código a repetir
-    // IMPORTANTE: cambiar la condición para evitar bucle infinito
-}
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>18 while</h1>
+        <p>while repite un bloque mientras una condición siga siendo verdadera.</p>
 
         <div class="ejemplo">
-            <h2>Ejemplo 1: Contar hasta un número</h2>
-            <div class="codigo">
-let i = 1;
-while (i <= 5) {
-    console.log(i);
-    i++; // incrementar
-}
-            </div>
-            <label>Contar hasta:</label> <input type="number" id="hasta1" placeholder="5" value="5">
-            <button onclick="contarHasta()">Ejecutar</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>let i = 1; while (i <= 3) { console.log(i); i++; }</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Restar hasta cero</h2>
-            <div class="codigo">
-let numero = 5;
-while (numero > 0) {
-    console.log(numero);
-    numero--; // decrementar
-}
-console.log("¡Despegue!");
-            </div>
-            <label>Comenzar desde:</label> <input type="number" id="desde" placeholder="5" value="5">
-            <button onclick="restarHastaCero()">Ejecutar Cuenta Regresiva</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Sumar números</h2>
-            <div class="codigo">
-let suma = 0;
-let i = 1;
-while (i <= 10) {
-    suma += i; // suma = suma + i
-    i++;
-}
-console.log("Suma de 1 a 10: " + suma); // 55
-            </div>
-            <label>Sumar números desde 1 hasta:</label> <input type="number" id="sumarHasta" placeholder="10" value="10">
-            <button onclick="sumarNumeros()">Calcular Suma</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 4: Tabla de multiplicar</h2>
-            <div class="codigo">
-let numero = 5;
-let multiplicador = 1;
-while (multiplicador <= 12) {
-    console.log(numero + " x " + multiplicador + " = " + (numero * multiplicador));
-    multiplicador++;
-}
-            </div>
-            <label>Tabla de multiplicar del:</label> <input type="number" id="tablaNum" placeholder="5" value="5">
-            <button onclick="tablaMultiplicar()">Ver Tabla</button>
-            <div id="resultado4" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 5: Productos en carrito</h2>
-            <div class="codigo">
-let carrito = 0;
-let producto = prompt("Ingresa precio (0 para terminar):");
-while (producto != 0) {
-    carrito += parseFloat(producto);
-    producto = prompt("Ingresa precio (0 para terminar):");
-}
-console.log("Total: $" + carrito);
-            </div>
-            <p><strong>Este ejemplo suma números que ingreses</strong></p>
-            <label>Ingresa precios (dejar vacío para terminar):</label><br>
-            <div id="preciosInput"></div>
-            <button onclick="agregarPrecio()">Agregar Precio</button>
-            <button onclick="terminarCarrito()">Finalizar Carrito</button>
-            <div id="resultado5" class="resultado" style="display:none;"></div>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/18-while.js"></script>

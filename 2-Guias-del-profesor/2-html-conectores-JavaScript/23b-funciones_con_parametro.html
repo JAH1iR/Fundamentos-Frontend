@@ -1,184 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>23b - Funciones con Parámetros</title>
+    <title>23b funciones con parametro</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 12px;
+            white-space: pre-wrap;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
-        }
-        input, button {
-            padding: 8px 12px;
-            margin: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>23b - Funciones con Parámetros</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué son los parámetros?</h2>
-            <p>Los parámetros permiten que una función reciba valores para trabajar con ellos.</p>
-            <div class="codigo">
-// Definir función con parámetros
-function saludar(nombre) {
-    console.log("Hola " + nombre);
-}
-
-// Llamar la función pasando un valor
-saludar("Juan");   // Imprime: Hola Juan
-saludar("María");  // Imprime: Hola María
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>23b funciones con parametro</h1>
+        <p>Las funciones con parámetros aceptan datos de entrada para producir resultados distintos.</p>
 
         <div class="ejemplo">
-            <h2>Sintaxis</h2>
-            <div class="codigo">
-function nombreFuncion(parametro1, parametro2) {
-    // usar parametro1 y parametro2
-}
-
-nombreFuncion(valor1, valor2);  // Pasar valores
-            </div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>function sumar(a, b) { return a + b; } console.log(sumar(4, 6));</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 1: Saludar con nombre</h2>
-            <div class="codigo">
-function saludar(nombre) {
-    console.log("Hola " + nombre);
-}
-
-saludar("Carlos");  // Salida: Hola Carlos
-            </div>
-            <label>Nombre:</label> <input type="text" id="nombre" placeholder="Ingresa tu nombre">
-            <button onclick="saludarPersona()">Saludar</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Sumar dos números</h2>
-            <div class="codigo">
-function sumar(a, b) {
-    console.log(a + b);
-}
-
-sumar(5, 3);   // Salida: 8
-sumar(10, 20); // Salida: 30
-            </div>
-            <label>Número 1:</label> <input type="number" id="num1" value="5">
-            <label>Número 2:</label> <input type="number" id="num2" value="3">
-            <button onclick="sumarNumeros()">Sumar</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Multiplicar número</h2>
-            <div class="codigo">
-function multiplicar(numero, factor) {
-    console.log(numero + " x " + factor + " = " + (numero * factor));
-}
-
-multiplicar(5, 3);  // Salida: 5 x 3 = 15
-multiplicar(10, 4); // Salida: 10 x 4 = 40
-            </div>
-            <label>Número:</label> <input type="number" id="numero" value="5">
-            <label>Factor:</label> <input type="number" id="factor" value="3">
-            <button onclick="multiplicarNumeros()">Multiplicar</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 4: Presentarse con edad</h2>
-            <div class="codigo">
-function presentarse(nombre, edad, profesion) {
-    console.log("Mi nombre es " + nombre);
-    console.log("Tengo " + edad + " años");
-    console.log("Soy " + profesion);
-}
-
-presentarse("Juan", 30, "Ingeniero");
-presentarse("María", 25, "Doctora");
-            </div>
-            <label>Nombre:</label> <input type="text" id="nombre2" placeholder="Juan"><br>
-            <label>Edad:</label> <input type="number" id="edad" value="30"><br>
-            <label>Profesión:</label> <input type="text" id="profesion" placeholder="Ingeniero"><br>
-            <button onclick="presentarPersona()">Presentar</button>
-            <div id="resultado4" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 5: Verificar edad</h2>
-            <div class="codigo">
-function esAdulto(edad) {
-    if (edad >= 18) {
-        console.log("Eres mayor de edad");
-    } else {
-        console.log("Eres menor de edad");
-    }
-}
-
-esAdulto(25);  // Salida: Eres mayor de edad
-esAdulto(15);  // Salida: Eres menor de edad
-            </div>
-            <label>Edad:</label> <input type="number" id="edad2" value="25">
-            <button onclick="verificarEdad()">Verificar</button>
-            <div id="resultado5" class="resultado" style="display:none;"></div>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/23b-funciones_con_parametro.js"></script>

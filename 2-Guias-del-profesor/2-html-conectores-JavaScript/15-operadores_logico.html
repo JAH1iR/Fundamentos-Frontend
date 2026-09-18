@@ -1,206 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>15 - Operadores Lógicos (AND)</title>
+    <title>15 operadores logico</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
+            white-space: pre-wrap;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
-        }
-        .tabla-verdad {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        .tabla-verdad th, .tabla-verdad td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: center;
-        }
-        .tabla-verdad th {
-            background-color: #0066cc;
-            color: white;
-        }
-        input, button {
-            padding: 8px 12px;
-            margin: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>15 - Operadores Lógicos AND (&&)</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es el operador AND (&&)?</h2>
-            <p>El operador AND (&&) retorna verdadero SOLO si todas las condiciones son verdaderas.</p>
-            <div class="codigo">
-if (condición1 && condición2) {
-    // se ejecuta si AMBAS son verdaderas
-}
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>15 operadores logico</h1>
+        <p>Los operadores lógicos combinan condiciones para crear decisiones más complejas.</p>
 
         <div class="ejemplo">
-            <h2>Tabla de Verdad - AND (&&)</h2>
-            <table class="tabla-verdad">
-                <tr>
-                    <th>Condición 1</th>
-                    <th>Condición 2</th>
-                    <th>Resultado (&&)</th>
-                </tr>
-                <tr>
-                    <td>Verdadero</td>
-                    <td>Verdadero</td>
-                    <td><strong style="color: green;">Verdadero</strong></td>
-                </tr>
-                <tr>
-                    <td>Verdadero</td>
-                    <td>Falso</td>
-                    <td><strong style="color: red;">Falso</strong></td>
-                </tr>
-                <tr>
-                    <td>Falso</td>
-                    <td>Verdadero</td>
-                    <td><strong style="color: red;">Falso</strong></td>
-                </tr>
-                <tr>
-                    <td>Falso</td>
-                    <td>Falso</td>
-                    <td><strong style="color: red;">Falso</strong></td>
-                </tr>
-            </table>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>const tieneAcceso = true; const esAdmin = true; console.log(tieneAcceso && esAdmin);</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 1: Acceso a una zona VIP</h2>
-            <p>Se necesita ser mayor de 18 años Y tener entrada válida</p>
-            <div class="codigo">
-let edad = 20;
-let tieneEntrada = true;
-
-if (edad >= 18 && tieneEntrada) {
-    console.log("Bienvenido a la zona VIP");
-} else {
-    console.log("No puedes acceder");
-}
-            </div>
-            <label>Edad:</label> <input type="number" id="edad1" placeholder="18">
-            <label>¿Tiene entrada?</label> 
-            <select id="entrada1">
-                <option value="true">Sí</option>
-                <option value="false">No</option>
-            </select>
-            <button onclick="verificarVIP()">Verificar Acceso</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Contraseña segura</h2>
-            <p>La contraseña debe tener al menos 8 caracteres Y contener números</p>
-            <div class="codigo">
-let contraseña = "abc12345";
-
-if (contraseña.length >= 8 && /\d/.test(contraseña)) {
-    console.log("Contraseña segura");
-} else {
-    console.log("Contraseña no cumple requisitos");
-}
-            </div>
-            <label>Ingresa contraseña:</label><br>
-            <input type="password" id="contraseña" placeholder="Mín. 8 caracteres con números">
-            <button onclick="verificarSeguridad()">Verificar Seguridad</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Rango de valores</h2>
-            <p>Un número está en el rango 10-100 si es mayor O igual a 10 Y menor O igual a 100</p>
-            <div class="codigo">
-let numero = 50;
-
-if (numero >= 10 && numero <= 100) {
-    console.log("El número está en el rango");
-} else {
-    console.log("El número está fuera del rango");
-}
-            </div>
-            <label>Ingresa un número:</label><br>
-            <input type="number" id="numero" placeholder="Número">
-            <button onclick="verificarRango()">Verificar</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 4: Múltiples condiciones</h2>
-            <p>Obtener descuento si tienes más de 5 compras Y tu gasto es mayor a $100</p>
-            <div class="codigo">
-let compras = 6;
-let gasto = 150;
-
-if (compras > 5 && gasto > 100) {
-    console.log("¡Tienes 20% de descuento!");
-} else {
-    console.log("No aplica descuento");
-}
-            </div>
-            <label>Número de compras:</label> <input type="number" id="compras" placeholder="0"><br>
-            <label>Gasto total ($):</label> <input type="number" id="gasto" placeholder="0">
-            <button onclick="aplicarDescuento()">Verificar Descuento</button>
-            <div id="resultado4" class="resultado" style="display:none;"></div>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/15-operadores_logico.js"></script>

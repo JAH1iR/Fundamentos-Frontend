@@ -1,216 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>17 - Switch-Case</title>
+    <title>17 switch case</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 12px;
+            white-space: pre-wrap;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
-        }
-        input, button, select {
-            padding: 8px 12px;
-            margin: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>17 - Control de flujo: Switch-Case</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es Switch-Case?</h2>
-            <p>Switch es una alternativa a múltiples if-else cuando comparas una variable con varios valores específicos.</p>
-            <div class="codigo">
-switch (valor) {
-    case valor1:
-        // código si es valor1
-        break;
-    case valor2:
-        // código si es valor2
-        break;
-    default:
-        // si no coincide con ninguno
-}
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>17 switch case</h1>
+        <p>switch permite evaluar una variable frente a varios casos de forma ordenada y clara.</p>
 
         <div class="ejemplo">
-            <h2>Ejemplo 1: Día de la semana</h2>
-            <div class="codigo">
-let dia = 1;
-let nombre;
-
-switch (dia) {
-    case 1:
-        nombre = "Lunes";
-        break;
-    case 2:
-        nombre = "Martes";
-        break;
-    case 3:
-        nombre = "Miércoles";
-        break;
-    default:
-        nombre = "Día inválido";
-}
-console.log(nombre);
-            </div>
-            <label>Número del día (1-7):</label><br>
-            <input type="number" id="dia" placeholder="1" min="1" max="7">
-            <button onclick="obtenerDia()">Obtener Día</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>const opcion = 2; switch (opcion) { case 1: console.log("Uno"); break; default: console.log("Otro"); }</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Calificación de películas</h2>
-            <div class="codigo">
-let calificacion = 'PG';
-
-switch (calificacion) {
-    case 'G':
-        console.log("Apta para todos los públicos");
-        break;
-    case 'PG':
-        console.log("Se recomienda supervisión parental");
-        break;
-    case 'PG-13':
-        console.log("Puede no ser apta para menores de 13");
-        break;
-    case 'R':
-        console.log("Requiere acompañante mayor de edad");
-        break;
-    default:
-        console.log("Calificación desconocida");
-}
-            </div>
-            <label>Calificación:</label>
-            <select id="pelicula">
-                <option value="G">G - Para todos</option>
-                <option value="PG">PG - Supervisión parental</option>
-                <option value="PG-13">PG-13 - Mayores de 13</option>
-                <option value="R">R - Acompañante requerido</option>
-            </select>
-            <button onclick="clasificarPelicula()">Clasificar</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Operación matemática</h2>
-            <div class="codigo">
-let operador = '+';
-let a = 10;
-let b = 5;
-let resultado;
-
-switch (operador) {
-    case '+':
-        resultado = a + b;
-        break;
-    case '-':
-        resultado = a - b;
-        break;
-    case '*':
-        resultado = a * b;
-        break;
-    case '/':
-        resultado = a / b;
-        break;
-    default:
-        resultado = "Operador no válido";
-}
-console.log(resultado);
-            </div>
-            <label>Número 1:</label> <input type="number" id="num1" placeholder="10" value="10"><br>
-            <label>Operador:</label>
-            <select id="operador">
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="*">*</option>
-                <option value="/">/</option>
-            </select>
-            <label>Número 2:</label> <input type="number" id="num2" placeholder="5" value="5"><br>
-            <button onclick="calcular()">Calcular</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 4: Estación del año</h2>
-            <div class="codigo">
-let mes = 3;
-let estacion;
-
-switch (mes) {
-    case 12:
-    case 1:
-    case 2:
-        estacion = "Invierno";
-        break;
-    case 3:
-    case 4:
-    case 5:
-        estacion = "Primavera";
-        break;
-    // ...
-}
-            </div>
-            <label>Número de mes (1-12):</label><br>
-            <input type="number" id="mes" placeholder="1" min="1" max="12">
-            <button onclick="obtenerEstacion()">Obtener Estación</button>
-            <div id="resultado4" class="resultado" style="display:none;"></div>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/17-switch_case.js"></script>

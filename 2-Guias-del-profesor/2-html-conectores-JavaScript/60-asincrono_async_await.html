@@ -1,135 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>60 - Async/Await</title>
+    <title>60 asincrono async await</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 11px;
+            white-space: pre-wrap;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
-        }
-        button {
-            padding: 8px 12px;
-            margin: 5px;
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>60 - Async/Await (Forma moderna)</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es Async/Await?</h2>
-            <p>Async/Await hace que el código asincrónico se lea como si fuera sincrónico. Es la forma más moderna de manejar promesas.</p>
-            <div class="codigo">
-// Sintaxis:
-async function miFunc() {
-    try {
-        const resultado = await unaPromesa();
-        console.log(resultado);
-    } catch (error) {
-        console.error(error);
-    }
-}
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>60 asincrono async await</h1>
+        <p>async/await hace que el código asíncrono se lea casi como si fuera sincrónico, con manejo de errores más claro.</p>
 
         <div class="ejemplo">
-            <h2>Ventajas de Async/Await</h2>
-            <ul>
-                <li>✓ Código más legible y limpio</li>
-                <li>✓ Se parece a código sincrónico</li>
-                <li>✓ Manejo de errores con try/catch</li>
-            </ul>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>async function cargar() { const r = await Promise.resolve("Lista cargada"); console.log(r); } cargar();</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 1: Async/Await simple</h2>
-            <button onclick="ejemplo1()">Ver Ejemplo</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Obtener datos de API con Async/Await</h2>
-            <button onclick="ejemplo2()">Obtener Usuario</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Manejar errores con try/catch</h2>
-            <button onclick="ejemplo3()">Probar Error</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Comparación: .then() vs Async/Await</h2>
-            <div class="codigo">
-// Con .then()
-fetch(url)
-    .then(r => r.json())
-    .then(data => console.log(data))
-    .catch(e => console.error(e));
-
-// Con Async/Await (más limpio)
-async function obtener() {
-    try {
-        const r = await fetch(url);
-        const data = await r.json();
-        console.log(data);
-    } catch (e) {
-        console.error(e);
-    }
-}
-            </div>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/60-asincrono_async_await.js"></script>

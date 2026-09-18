@@ -1,76 +1,30 @@
-function saludarPersona() {
-            let nombre = document.getElementById("nombre").value;
-            let resultado = document.getElementById("resultado1");
-            
-            if (nombre === "") {
-                resultado.style.display = "none";
-                return;
-            }
-            
-            resultado.innerHTML = "✓ Hola " + nombre;
-            resultado.style.display = "block";
-        }
+function saludarPersona(nombre) {
+  return nombre === '' ? 'Nombre vacío' : `✓ Hola ${nombre}`;
+}
 
-        function sumarNumeros() {
-            let num1 = parseFloat(document.getElementById("num1").value);
-            let num2 = parseFloat(document.getElementById("num2").value);
-            let resultado = document.getElementById("resultado2");
-            
-            if (isNaN(num1) || isNaN(num2)) {
-                resultado.style.display = "none";
-                return;
-            }
-            
-            resultado.innerHTML = "✓ " + num1 + " + " + num2 + " = " + (num1 + num2);
-            resultado.style.display = "block";
-        }
+function sumarNumeros(num1, num2) {
+  if (Number.isNaN(Number(num1)) || Number.isNaN(Number(num2))) return 'Datos inválidos';
+  return `✓ ${num1} + ${num2} = ${Number(num1) + Number(num2)}`;
+}
 
-        function multiplicarNumeros() {
-            let numero = parseFloat(document.getElementById("numero").value);
-            let factor = parseFloat(document.getElementById("factor").value);
-            let resultado = document.getElementById("resultado3");
-            
-            if (isNaN(numero) || isNaN(factor)) {
-                resultado.style.display = "none";
-                return;
-            }
-            
-            resultado.innerHTML = "✓ " + numero + " x " + factor + " = " + (numero * factor);
-            resultado.style.display = "block";
-        }
+function multiplicarNumeros(numero, factor) {
+  if (Number.isNaN(Number(numero)) || Number.isNaN(Number(factor))) return 'Datos inválidos';
+  return `✓ ${numero} x ${factor} = ${Number(numero) * Number(factor)}`;
+}
 
-        function presentarPersona() {
-            let nombre = document.getElementById("nombre2").value;
-            let edad = document.getElementById("edad").value;
-            let profesion = document.getElementById("profesion").value;
-            let resultado = document.getElementById("resultado4");
-            
-            if (nombre === "" || edad === "" || profesion === "") {
-                resultado.style.display = "none";
-                return;
-            }
-            
-            let output = "Mi nombre es " + nombre + "<br>";
-            output += "Tengo " + edad + " años<br>";
-            output += "Soy " + profesion;
-            
-            resultado.innerHTML = "✓ " + output;
-            resultado.style.display = "block";
-        }
+function presentarPersona(nombre, edad, profesion) {
+  if (!nombre || !edad || !profesion) return 'Faltan datos';
+  return `✓ Mi nombre es ${nombre}\nTengo ${edad} años\nSoy ${profesion}`;
+}
 
-        function verificarEdad() {
-            let edad = parseInt(document.getElementById("edad2").value);
-            let resultado = document.getElementById("resultado5");
-            
-            if (isNaN(edad)) {
-                resultado.style.display = "none";
-                return;
-            }
-            
-            if (edad >= 18) {
-                resultado.innerHTML = "✓ Eres mayor de edad";
-            } else {
-                resultado.innerHTML = "✗ Eres menor de edad";
-            }
-            resultado.style.display = "block";
-        }
+function verificarEdad(edad) {
+  if (Number.isNaN(Number(edad))) return 'Edad inválida';
+  return edad >= 18 ? '✓ Eres mayor de edad' : '✗ Eres menor de edad';
+}
+
+console.log('--- Funciones con parámetro ---');
+console.log(saludarPersona('Ana'));
+console.log(sumarNumeros(4, 6));
+console.log(multiplicarNumeros(3, 5));
+console.log(presentarPersona('Carlos', 28, 'desarrollador'));
+console.log(verificarEdad(21));

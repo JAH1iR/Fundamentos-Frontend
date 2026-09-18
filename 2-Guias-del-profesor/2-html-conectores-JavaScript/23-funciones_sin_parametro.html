@@ -1,181 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>23 - Funciones sin Parámetros</title>
+    <title>23 funciones sin parametro</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 12px;
+            white-space: pre-wrap;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
-        }
-        button {
-            padding: 8px 12px;
-            margin: 5px;
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>23 - Funciones sin Parámetros</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es una función?</h2>
-            <p>Una función es un bloque de código reutilizable que ejecuta una tarea específica.</p>
-            <div class="codigo">
-// Definir función (sin parámetros)
-function saludar() {
-    console.log("Hola");
-}
-
-// Llamar la función
-saludar();  // Imprime: Hola
-saludar();  // Imprime: Hola
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>23 funciones sin parametro</h1>
+        <p>Las funciones permiten encapsular lógica reutilizable y mantener el código ordenado.</p>
 
         <div class="ejemplo">
-            <h2>Sintaxis de funciones sin parámetros</h2>
-            <div class="codigo">
-function nombreFuncion() {
-    // código a ejecutar
-}
-
-nombreFuncion();  // Llamar la función
-            </div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>function saludar() { console.log("Hola"); } saludar();</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 1: Saludo simple</h2>
-            <div class="codigo">
-function saludar() {
-    console.log("¡Hola!");
-}
-
-saludar();  // Llama la función
-            </div>
-            <button onclick="saludar()">Llamar Saludar</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Mostrar fecha</h2>
-            <div class="codigo">
-function mostrarFecha() {
-    let fecha = new Date();
-    console.log(fecha);
-}
-
-mostrarFecha();
-            </div>
-            <button onclick="mostrarFecha()">Mostrar Fecha Actual</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Presentarse</h2>
-            <div class="codigo">
-function presentarse() {
-    console.log("Mi nombre es Pedro");
-    console.log("Tengo 25 años");
-    console.log("Soy programador");
-}
-
-presentarse();
-            </div>
-            <button onclick="presentarse()">Ver Presentación</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 4: Mostrar menú</h2>
-            <div class="codigo">
-function mostrarMenu() {
-    console.log("===== MENÚ =====");
-    console.log("1. Inicio");
-    console.log("2. Galería");
-    console.log("3. Contacto");
-    console.log("4. Salir");
-    console.log("================");
-}
-
-mostrarMenu();
-            </div>
-            <button onclick="mostrarMenu()">Ver Menú</button>
-            <div id="resultado4" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 5: Información del navegador</h2>
-            <div class="codigo">
-function mostrarInfoNavegador() {
-    console.log("Navegador: " + navigator.userAgent);
-    console.log("Idioma: " + navigator.language);
-    console.log("Plataforma: " + navigator.platform);
-}
-
-mostrarInfoNavegador();
-            </div>
-            <button onclick="mostrarInfoNavegador()">Ver Información del Navegador</button>
-            <div id="resultado5" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ventajas de las funciones</h2>
-            <ul>
-                <li><strong>Reutilización:</strong> Una función se puede llamar múltiples veces</li>
-                <li><strong>Organización:</strong> Divide el código en bloques lógicos</li>
-                <li><strong>Mantenibilidad:</strong> Fácil de actualizar y corregir</li>
-                <li><strong>Legibilidad:</strong> El código es más claro y entendible</li>
-            </ul>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/23-funciones_sin_parametro.js"></script>

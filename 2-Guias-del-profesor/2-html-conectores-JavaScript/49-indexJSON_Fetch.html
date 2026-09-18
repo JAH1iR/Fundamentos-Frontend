@@ -1,113 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>49 - Fetch API - GET</title>
+    <title>49 indexJSON Fetch</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 12px;
-        }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
             white-space: pre-wrap;
-            font-family: monospace;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        button {
-            padding: 8px 12px;
-            margin: 5px;
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-            border-radius: 4px;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>49 - Fetch API - Obtener Datos (GET)</h1>
-        
-        <div class="ejemplo">
-            <h2>¿Qué es Fetch?</h2>
-            <p>Fetch es una API moderna de JavaScript para hacer peticiones HTTP. Reemplaza XMLHttpRequest.</p>
-            <div class="codigo">
-fetch(url)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error("Error:", error));
-            </div>
-        </div>
+    <div class="contenedor">
+        <h1>49 indexJSON Fetch</h1>
+        <p>fetch es la forma moderna de consumir APIs y obtener datos en formato JSON.</p>
 
         <div class="ejemplo">
-            <h2>Ejemplo 1: Obtener datos de API pública</h2>
-            <p>Obtenemos datos de una API pública de usuarios</p>
-            <button onclick="obtenerUsuarios()">Obtener Usuarios</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>fetch("https://jsonplaceholder.typicode.com/users/1").then(r => r.json()).then(console.log);</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Obtener un usuario específico</h2>
-            <button onclick="obtenerUsuario()">Obtener Usuario 1</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Manejo de errores</h2>
-            <button onclick="obtenerConError()">Probar URL inválida</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Pasos de Fetch</h2>
-            <ol>
-                <li><strong>fetch(url):</strong> Hace la petición</li>
-                <li><strong>.then(response):</strong> La respuesta llega</li>
-                <li><strong>response.json():</strong> Convierte a JSON</li>
-                <li><strong>.then(data):</strong> Recibimos los datos</li>
-                <li><strong>.catch(error):</strong> Manejar errores</li>
-            </ol>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/49-indexJSON_Fetch.js"></script>

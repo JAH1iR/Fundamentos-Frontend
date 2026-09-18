@@ -1,18 +1,21 @@
-let nombre = 'Pedro';
-        let cantidad = 257;
-        let precio = 77.77;
-        let verdad = true;
-        let nulo = null;
-        let persona = {nombre:'Sophia', apellido:'Loren', edad: 38, signo:'libra'};
+const nombre = 'Pedro';
+const cantidad = 257;
+const precio = 77.77;
+const verdad = true;
+const nulo = null;
+const persona = {
+  nombre: 'Sophia',
+  apellido: 'Loren',
+  edad: 38,
+  signo: 'libra'
+};
 
-        document.writeln(nombre);
-        document.writeln('<br>');
-        document.writeln(cantidad);
-        document.writeln('<br>');
-        document.writeln(precio);
-        document.writeln('<br>');
-        document.writeln(verdad);
-        document.writeln('<br>');
-        document.writeln(nulo);
-        document.writeln('<br>');
-        document.writeln(persona.nombre, ' ', persona.edad, ' ',persona.signo);
+console.log('Nombre:', nombre);
+console.log('Cantidad:', cantidad);
+console.log('Precio:', precio);
+console.log('Verdad:', verdad);
+console.log('Nulo:', nulo);
+console.log('Persona:', persona);
+console.log('Nombre de la persona:', persona.nombre);
+console.log('Edad:', persona.edad);
+console.log('Signo:', persona.signo);

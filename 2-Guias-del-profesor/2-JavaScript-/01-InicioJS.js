@@ -1,15 +1,17 @@
-document.writeln('..Buenos días a Todos, este saludo es externo...!!');
-document.writeln('Gracias, nos vemos adios a todos...');
-// var o let sirven para definir variables. La diferencia es que se utiliza (let) para definir la variable localmente y (var) para definirla global en cualquier sección del codigo javascript.
+console.log('..Buenos días a Todos, este saludo es externo...!!');
+console.log('Gracias, nos vemos adios a todos...');
+
+// En JavaScript moderno se recomienda usar let y const.
+// La sintaxis histórica del lenguaje todavía existe, pero hoy no es la práctica habitual.
 let nombre;
-let Nombre = 'Pedro';
-var _nombre = 'Tomas';
-var NOMBRE = 'Elizabeth';
-var $_nombre = 'Antonio';
+const nombreCompleto = 'Pedro';
+const _nombre = 'Tomas';
+const NOMBRE = 'Elizabeth';
+const $_nombre = 'Antonio';
 nombre = 'Anny';
 
-document.writeln(Nombre);
-document.writeln(nombre);
-document.writeln(_nombre);
-document.writeln(NOMBRE);
-document.writeln($_nombre);
+console.log('nombreCompleto:', nombreCompleto);
+console.log('nombre:', nombre);
+console.log('_nombre:', _nombre);
+console.log('NOMBRE:', NOMBRE);
+console.log('$_nombre:', $_nombre);

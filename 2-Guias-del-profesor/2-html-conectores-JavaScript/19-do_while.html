@@ -1,188 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>19 - Ciclo Do-While</title>
+    <title>19 do while</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 20px auto;
+            max-width: 960px;
+            margin: 40px auto;
             padding: 20px;
-            background-color: #f4f4f4;
+            background: #f5f7fa;
+            color: #1f2937;
         }
-        .container {
+        .contenedor {
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
         h1 {
-            color: #333;
-            border-bottom: 3px solid #0066cc;
-            padding-bottom: 10px;
+            margin-top: 0;
+            color: #111827;
+        }
+        p {
+            line-height: 1.6;
         }
         .ejemplo {
-            background-color: #f9f9f9;
-            border-left: 4px solid #0066cc;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 4px;
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 5px solid #2563eb;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
         }
-        .codigo {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            margin: 10px 0;
-            font-family: 'Courier New', monospace;
+        .ejemplo h2 {
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        pre {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 14px;
+            border-radius: 8px;
             overflow-x: auto;
-            border-radius: 4px;
-            font-size: 12px;
-        }
-        .resultado {
-            background-color: #e8f5e9;
-            border: 1px solid #4caf50;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            color: #2e7d32;
             white-space: pre-wrap;
-            font-family: monospace;
+            margin: 0;
+            font-family: Consolas, monospace;
+            font-size: 0.9rem;
         }
-        .diferencia {
-            background-color: #fff3cd;
-            border: 1px solid #ffc107;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-        }
-        input, button {
-            padding: 8px 12px;
-            margin: 5px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-        button:hover {
-            background-color: #0052a3;
+        .aviso {
+            background: #eef6ff;
+            border-left: 4px solid #2563eb;
+            padding: 12px 14px;
+            border-radius: 8px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>19 - Ciclo Do-While</h1>
-        
-        <div class="diferencia">
-            <strong>Diferencia importante:</strong><br>
-            <strong>While:</strong> Verifica la condición PRIMERO, luego ejecuta<br>
-            <strong>Do-While:</strong> Ejecuta el bloque PRIMERO, luego verifica
-        </div>
+    <div class="contenedor">
+        <h1>19 do while</h1>
+        <p>do/while ejecuta el bloque al menos una vez antes de evaluar la condición.</p>
 
         <div class="ejemplo">
-            <h2>¿Qué es un ciclo Do-While?</h2>
-            <p>Un ciclo do-while repite un bloque de código al menos una vez, y después verifica la condición.</p>
-            <div class="codigo">
-do {
-    // código a repetir (se ejecuta AL MENOS UNA VEZ)
-} while (condición);
-            </div>
+            <h2>Ejemplo de referencia</h2>
+            <pre><code>let n = 0; do { console.log(n); n++; } while (n < 2);</code></pre>
         </div>
 
-        <div class="ejemplo">
-            <h2>Ejemplo 1: Imprimir números (Do-While vs While)</h2>
-            <p><strong>Do-While</strong> - se ejecuta al menos una vez aunque la condición sea falsa desde el inicio</p>
-            <div class="codigo">
-let i = 1;
-do {
-    console.log(i);
-    i++;
-} while (i <= 5);
-            </div>
-            <button onclick="ejemploDoWhile()">Ver Do-While</button>
-            <div id="resultado1" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 2: Menú de usuario (diferencia clave)</h2>
-            <p>Do-While es perfecto para menús porque se muestra al menos una vez</p>
-            <div class="codigo">
-let opcion;
-do {
-    opcion = prompt("1-Jugar, 2-Salir, 3-Configuración");
-    switch(opcion) {
-        case '1': console.log("Iniciando juego..."); break;
-        case '2': console.log("Adiós"); break;
-        case '3': console.log("Abriendo configuración..."); break;
-        default: console.log("Opción inválida");
-    }
-} while (opcion !== '2');
-            </div>
-            <label>Número de iteraciones:</label>
-            <input type="number" id="iteraciones2" value="3" min="1" max="10">
-            <button onclick="menuSimulado()">Ver Menú Simulado</button>
-            <div id="resultado2" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 3: Validación de entrada</h2>
-            <p>Pedir un número hasta que sea válido (entre 1 y 100)</p>
-            <div class="codigo">
-let numero;
-do {
-    numero = prompt("Ingresa número entre 1-100:");
-    if (numero < 1 || numero > 100) {
-        console.log("Inválido, intenta de nuevo");
-    }
-} while (numero < 1 || numero > 100);
-console.log("Número válido: " + numero);
-            </div>
-            <label>Ingresa un número (1-100):</label><br>
-            <input type="number" id="validar" placeholder="50" min="1" max="100">
-            <button onclick="validarNumero()">Validar</button>
-            <div id="resultado3" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 4: Sumar números con Do-While</h2>
-            <div class="codigo">
-let suma = 0;
-let i = 1;
-do {
-    suma += i;
-    i++;
-} while (i <= 5);
-console.log("Suma: " + suma);
-            </div>
-            <label>Sumar números hasta:</label>
-            <input type="number" id="sumarHasta" value="5">
-            <button onclick="sumarConDoWhile()">Calcular</button>
-            <div id="resultado4" class="resultado" style="display:none;"></div>
-        </div>
-
-        <div class="ejemplo">
-            <h2>Ejemplo 5: Comparación While vs Do-While</h2>
-            <p>Cuando la condición es falsa desde el inicio:</p>
-            <div class="codigo">
-// While: no ejecuta nada
-while (false) {
-    console.log("No se ejecuta");
-}
-
-// Do-While: se ejecuta una vez
-do {
-    console.log("Se ejecuta una vez");
-} while (false);
-            </div>
-            <button onclick="compararWhileDoWhile()">Ver Comparación</button>
-            <div id="resultado5" class="resultado" style="display:none;"></div>
-        </div>
+        <p class="aviso">La salida principal del ejemplo se muestra en la consola del navegador con F12 &gt; Console. Este bloque sirve como referencia visual del concepto y el script real sigue ejecutándose en consola.</p>
     </div>
 
     <script src="../2-JavaScript-/19-do_while.js"></script>

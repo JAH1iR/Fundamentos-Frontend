@@ -1,12 +1,17 @@
-function fun_focus(){
-            document.getElementById('nombre').value = "";
-            document.getElementById('nombre').style.background = '';
-        }
+function fun_focus() {
+  const input = document.getElementById('nombre');
 
-        function fun_blur(){
-            if(document.getElementById('nombre').value ==''){
-                 document.getElementById('nombre').style.background = 'yellow';
-                alert('DEBE INGRESAR DATOS');
-            }
+  if (input) {
+    input.value = '';
+    input.style.background = '';
+  }
+}
 
-        }
+function fun_blur() {
+  const input = document.getElementById('nombre');
+
+  if (input && input.value === '') {
+    input.style.background = 'yellow';
+    console.log('DEBE INGRESAR DATOS');
+  }
+}

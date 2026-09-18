@@ -1,56 +1,50 @@
 // redondear al siguiente entero en decimal .5
-var precio = Math.round(399.59);
-document.writeln('Precio redondea al siguiente entero 399.59: ', precio);
-document.writeln('<br>');
+const precioRedondeado = Math.round(399.59);
+console.log('Precio redondeado al siguiente entero 399.59:', precioRedondeado);
+
 // redondear sin importar decimal hacia arriba
-var precio = Math.ceil(299.3);
-document.writeln('Precio Redondea hacia arriba 299.3: ', precio);
-document.writeln('<br>');
+const precioArriba = Math.ceil(299.3);
+console.log('Precio redondeado hacia arriba 299.3:', precioArriba);
+
 // redondear sin importar decimal hacia abajo
-var precio = Math.floor(540.9);
-document.writeln('Precio Redondea hacia abajo 540.9: ', precio);
-document.writeln('<br>');
+const precioAbajo = Math.floor(540.9);
+console.log('Precio redondeado hacia abajo 540.9:', precioAbajo);
 
-// calcular el seno de un angulo
-var seno = Math.sin(45);
-document.writeln('El seno de 45: ', seno);
-document.writeln('<br>');
+// calcular el seno de un ángulo
+const seno = Math.sin(45);
+console.log('El seno de 45:', seno);
+
 // calcular el exponencial de un número
-var expo = Math.exp(2);
-document.writeln('Exponencial de 2: ', expo);
-document.writeln('<br>');
+const expo = Math.exp(2);
+console.log('Exponencial de 2:', expo);
+
 // calcular el logaritmo de un número
-var loga = Math.log(5);
-document.writeln('logaritmo de 5: ', loga);
-document.writeln('<br>');
+const loga = Math.log(5);
+console.log('Logaritmo de 5:', loga);
+
 // calcula el valor absoluto
-var absoluto = Math.abs(-10);
-document.writeln('Valor absoluto de -10: ', absoluto);
+const absoluto = Math.abs(-10);
+console.log('Valor absoluto de -10:', absoluto);
 
-// calcular valor maximo de secuencia
-var maximo = Math.max(100, 700, 500, 80,400);
-document.writeln('Valor máximo es : ', maximo);
-document.writeln('<br>');
+// calcular valor máximo de secuencia
+const maximo = Math.max(100, 700, 500, 80, 400);
+console.log('Valor máximo es:', maximo);
 
-// calcular valor minimo de secuencia
-var minimo = Math.min(100, 700, 500, 80,400);
-document.writeln('Valor mínimo es : ', minimo);
-document.writeln('<br>');
+// calcular valor mínimo de secuencia
+const minimo = Math.min(100, 700, 500, 80, 400);
+console.log('Valor mínimo es:', minimo);
 
-// traer en pantalla valor aleatorio
-var aleatorio = Math.random();
-document.writeln('Valor aleatorio: ', aleatorio);
-document.writeln('<br>');
+// traer valor aleatorio
+const aleatorio = Math.random();
+console.log('Valor aleatorio:', aleatorio);
 
-var aleatorio2 = Math.round(Math.random());
-document.writeln('Valor aleatorio2: ', aleatorio2);
-document.writeln('<br>');
+const aleatorio2 = Math.round(Math.random());
+console.log('Valor aleatorio 2:', aleatorio2);
 
 // raíz cuadrada de un número
-var raiz = Math.sqrt(81);
-document.writeln('Raíz cuadrada de 81: ', raiz);
-document.writeln('<br>');
+const raiz = Math.sqrt(81);
+console.log('Raíz cuadrada de 81:', raiz);
 
 // calcular el exponente de un número
-var exponente = Math.pow(4,2);
-document.writeln('valor de 4 elevado a la 2: ', exponente);
+const exponente = Math.pow(4, 2);
+console.log('Valor de 4 elevado a la 2:', exponente);

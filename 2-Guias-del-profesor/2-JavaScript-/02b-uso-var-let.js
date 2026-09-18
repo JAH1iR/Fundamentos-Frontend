@@ -1,8 +1,13 @@
-// Las declaraciones var tienen un ámbito global o un ámbito de función/local.
-        var saludar = "Buenos días, saludos";
-        saludar = 7777;
-        function nuevaFuncion()
-        {
-         var hola = "hola...como estas";
-        }
-        document.writeln(saludar);
+// En JavaScript moderno preferimos let y const.
+// La forma histórica de declarar variables tenía un alcance más amplio y podía causar problemas.
+let saludar = 'Buenos días, saludos';
+
+function nuevaFuncion() {
+  let hola = 'hola...como estas';
+  console.log('Dentro de la función:', hola);
+}
+
+saludar = 7777;
+console.log('Valor global:', saludar);
+
+nuevaFuncion();
