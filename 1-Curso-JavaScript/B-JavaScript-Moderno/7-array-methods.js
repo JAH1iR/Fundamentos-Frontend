@@ -10,12 +10,12 @@ const productos = [
 ];
 
 const nombres = productos.map((producto) => producto.nombre);
-const tecnología = productos.filter((producto) => producto.categoria === "Tecnología");
+const tecnologia = productos.filter((producto) => producto.categoria === "Tecnología");
 const total = productos.reduce((acumulador, producto) => acumulador + producto.precio, 0);
 const precioMaximo = Math.max(...productos.map((producto) => producto.precio));
 
 console.log("Productos:", nombres);
-console.log("Categoría tecnología:", tecnología);
+console.log("Categoría tecnología:", tecnologia);
 console.log("Total de precios:", total);
 console.log("Precio máximo:", precioMaximo);
 

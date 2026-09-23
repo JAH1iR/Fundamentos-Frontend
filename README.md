@@ -17,10 +17,10 @@ Repositorio de apoyo para el aprendizaje de HTML, CSS, JavaScript y fundamentos 
 * **PDFs**: material adicional del curso.
 
 ### 3. 3-Arquitecturas-css
+* **css-boostrap**: ejemplos básicos y componentes de Bootstrap.
 * **css-box-model**: práctica del modelo de caja.
 * **css-flexbox**: diseño con flexbox.
 * **css-grid**: diseño con grid.
-* **INDEX.html**: punto de entrada visual para la sección de CSS.
 
 ## Extensiones recomendadas para VS Code
 
