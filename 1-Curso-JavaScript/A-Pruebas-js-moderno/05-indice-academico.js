@@ -1,6 +1,9 @@
 /*
-  Ejercicio 5 - Comparaciones estrictas y condicionales
-  === compara el valor y el tipo, evitando conversiones inesperadas.
+  Ejercicio 5 - Comparaciones y validación académica
+  Objetivo: comprender la diferencia entre comparaciones y la lógica condicional.
+  Aquí se revisa si el índice cumple con el mínimo requerido y si se trata de
+  un promedio perfecto. Esto refleja cómo se validan condiciones en apps reales
+  y formularios académicos.
 
   Ejecuta con: node 05-indice-academico.js
 */

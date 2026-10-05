@@ -1,6 +1,12 @@
-// Paso 10 - Renderizado condicional
-// En React se renderiza distinto contenido según el estado de la app.
-// Ejecuta este ejemplo con: node 10-conditional-rendering.js
+/*
+  Paso 10 - Renderizado condicional
+  Objetivo: mostrar contenido distinto según el estado de la aplicación.
+  En React, un componente cambia su contenido dependiendo de si un usuario está autenticado,
+  qué rol tiene o si existen datos para renderizar. Este patrón se usa para crear experiencias
+  más dinámicas y personalizadas.
+
+  Ejecuta este ejemplo con: node 10-conditional-rendering.js
+*/
 
 const usuario = {
   nombre: "Sofía",

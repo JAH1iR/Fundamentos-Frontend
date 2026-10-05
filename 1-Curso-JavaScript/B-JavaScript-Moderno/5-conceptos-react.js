@@ -1,6 +1,11 @@
-// Paso 5 - Conceptos clave para React
-// Estos ejemplos simulan los patrones más importantes que verás en React.
-// Ejecuta este archivo con: node 5-conceptos-react.js
+/*
+  Paso 5 - Conceptos clave para React
+  Objetivo: simular cómo se manejan props, state y listas en una aplicación React.
+  Este archivo representa la transición entre JavaScript puro y la mentalidad de componentes,
+  donde los datos cambian y la interfaz se actualiza a partir de esos cambios.
+
+  Ejecuta este archivo con: node 5-conceptos-react.js
+*/
 
 const crearEstado = (estadoInicial) => {
   let estadoActual = estadoInicial;

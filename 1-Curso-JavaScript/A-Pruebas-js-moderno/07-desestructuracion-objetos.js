@@ -1,5 +1,11 @@
-// Ejemplo complementario - Desestructuración de objetos
-// Ejecuta con: node 07-desestructuracion-objetos.js
+/*
+  Ejemplo complementario - Desestructuración de objetos
+  Objetivo: simplificar la lectura de propiedades anidadas dentro de un objeto.
+  En lugar de repetir Usuario.nombre, Usuario.edad y Usuario.preferencias, se extraen
+  solo los valores que se necesitan. Este patrón aparece mucho en React al recibir props.
+
+  Ejecuta con: node 07-desestructuracion-objetos.js
+*/
 const Usuario = {
   nombre: "eric",
   edad: 22,

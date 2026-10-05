@@ -1,6 +1,11 @@
-// Paso 3 - Template Literals
-// Permiten interpolar variables dentro de strings con una sintaxis más clara.
-// Ejecuta este ejemplo con: node 3-template-literals.js
+/*
+  Paso 3 - Template Literals
+  Objetivo: crear mensajes dinámicos y texto estructurado usando interpolación.
+  Las template strings permiten combinar variables y HTML literal sin concatenaciones
+  complejas, algo que se usa mucho al construir contenido dinámico.
+
+  Ejecuta este ejemplo con: node 3-template-literals.js
+*/
 
 const estudiante = "Carlos";
 const leccionesCompletadas = 8;

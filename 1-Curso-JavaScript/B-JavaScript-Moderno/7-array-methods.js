@@ -1,6 +1,11 @@
-// Paso 7 - Métodos de arreglos
-// En React es normal transformar listas con map, filtrar elementos y reducir valores.
-// Ejecuta este ejemplo con: node 7-array-methods.js
+/*
+  Paso 7 - Métodos de arreglos
+  Objetivo: practicar map, filter y reduce para transformar y resumir información.
+  En React estas operaciones son esenciales para mostrar listas, filtrar elementos y
+  calcular totales que luego pueden reflejarse en la interfaz.
+
+  Ejecuta este ejemplo con: node 7-array-methods.js
+*/
 
 const productos = [
   { nombre: "Laptop", precio: 1200, categoria: "Tecnología" },

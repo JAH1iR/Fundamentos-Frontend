@@ -1,6 +1,11 @@
-// Paso 0 - Fundamentos de ES6+
-// Este archivo representa la base mínima que necesitas antes de trabajar con React.
-// Ejecuta este ejemplo con: node 0-fundamentos-es6.js
+/*
+  Paso 0 - Fundamentos de ES6+
+  Objetivo: recordar los pilares del lenguaje que React usa todos los días.
+  Este ejemplo revisa variables, funciones, objetos, arrays y cómo se combinan
+  para construir lógica reutilizable antes de pasar a componentes y JSX.
+
+  Ejecuta este ejemplo con: node 0-fundamentos-es6.js
+*/
 
 const curso = "JavaScript Moderno";
 let progreso = 0;

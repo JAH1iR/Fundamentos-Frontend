@@ -1,6 +1,9 @@
 /*
-  Ejercicio 1 - Variables, arrays, operadores y funciones
-  Calcula el promedio de tres notas.
+  Ejercicio 1 - Promedio de notas
+  Objetivo: practicar variables, arrays y funciones.
+  Este ejemplo toma tres calificaciones, las suma y obtiene el promedio final.
+  También sirve para entender cómo transformar datos crudos en información útil
+  antes de mostrarlos en una interfaz.
 
   Ejecuta con: node 01-promedio-notas.js
 */

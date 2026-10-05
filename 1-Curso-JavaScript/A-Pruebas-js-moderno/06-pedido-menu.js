@@ -1,6 +1,8 @@
 /*
-  Ejercicio 6 - Objetos, arrays y map
-  Calcula el total de un pedido y enumera un menú.
+  Ejercicio 6 - Pedido de menú y recorrido de listas
+  Objetivo: combinar objetos, arrays y el método map para procesar información.
+  Se calcula el total de un pedido y además se enumera una lista de alimentos,
+  mostrando una de las formas más comunes de transformar datos en UI.
 
   Ejecuta con: node 06-pedido-menu.js
 */

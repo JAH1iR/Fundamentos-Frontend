@@ -1,6 +1,11 @@
-// Paso 1 - Arrow Functions
-// Las funciones flecha son muy comunes en React porque simplifican callbacks y JSX.
-// Ejecuta este ejemplo con: node 1-arrow-functions.js
+/*
+  Paso 1 - Arrow Functions
+  Objetivo: entender la sintaxis más moderna para declarar funciones.
+  En React, las arrow functions se usan ampliamente en callbacks, eventos y
+  transformaciones de listas, porque hacen el código más corto y legible.
+
+  Ejecuta este ejemplo con: node 1-arrow-functions.js
+*/
 
 const saludar = (nombre) => `Hola, ${nombre}`;
 const sumar = (primerNumero, segundoNumero) => primerNumero + segundoNumero;

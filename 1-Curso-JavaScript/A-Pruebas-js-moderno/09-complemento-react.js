@@ -1,7 +1,8 @@
 /*
   Ejercicio 7 - Complemento de JavaScript para React
-  Este ejemplo reúne los patrones que más se repiten al crear componentes:
-  props, estado inmutable, map, filter, renderizado condicional y async/await.
+  Objetivo: reunir los patrones que más se usan al crear componentes en React.
+  Aquí se trabajan props, estado inmutable, map, filter, renderizado condicional
+  y async/await para simular cómo se estructura la lógica de una app moderna.
 
   Ejecuta con: node 09-complemento-react.js
 */

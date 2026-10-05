@@ -1,6 +1,8 @@
 /*
   Ejercicio 10 - Renderizado condicional
-  Muestra información diferente según el estado del usuario y de la lista.
+  Objetivo: mostrar contenido distinto según el estado actual de la app.
+  Aquí se decide si un usuario está autenticado, qué panel puede ver y si hay
+  elementos para mostrar. Este patrón es esencial en React para renderizar UI dinámica.
 */
 const usuario = {
   nombre: "Sofía",

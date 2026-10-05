@@ -1,6 +1,8 @@
 /*
-  Ejercicio 2 - Condicionales y porcentajes
-  Aplica un descuento del 20% cuando la compra supera los $100.
+  Ejercicio 2 - Descuentos en compras
+  Objetivo: practicar condicionales, porcentajes y la lógica de negocio.
+  El script valida si el total supera un límite y, en ese caso, calcula un
+  descuento para mostrar el monto final que debe pagar el cliente.
 
   Ejecuta con: node 02-descuento-compra.js
 */

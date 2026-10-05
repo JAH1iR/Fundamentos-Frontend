@@ -1,6 +1,12 @@
-// Paso 9 - Async/Await
-// Async/Await hace que el código asíncrono se lea de forma mucho más clara.
-// Ejecuta este ejemplo con: node 9-async-await-basics.js
+/*
+  Paso 9 - Async/Await
+  Objetivo: practicar el flujo de operaciones asíncronas de una manera más legible.
+  Cuando una app consulta datos desde una API, el flujo debe esperar la respuesta;
+  async/await hace exactamente eso y mejora la claridad del código al mismo tiempo que
+  facilita la gestión de errores.
+
+  Ejecuta este ejemplo con: node 9-async-await-basics.js
+*/
 
 const esperar = (ms) =>
   new Promise((resolve) => {

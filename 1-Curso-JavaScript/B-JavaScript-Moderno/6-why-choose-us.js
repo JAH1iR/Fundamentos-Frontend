@@ -1,7 +1,11 @@
-// Paso 6 - Proyecto final: "Why choose us"
-// Este ejemplo reúne todo lo aprendido para simular una sección de marketing.
-// El objetivo es mostrar cómo se transforma data en una estructura de UI.
-// Ejecuta este archivo con: node 6-why-choose-us.js
+/*
+  Paso 6 - Proyecto final: "Why choose us"
+  Objetivo: reunir todos los conceptos vistos para transformar datos en una estructura
+  de interfaz. Este ejemplo simula una sección de marketing con varios pilares, mostrando
+  cómo se puede representar la UI a partir de objetos y listas.
+
+  Ejecuta este archivo con: node 6-why-choose-us.js
+*/
 
 const pilares = [
   {

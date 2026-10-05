@@ -1,6 +1,11 @@
-// Paso 4 - Spread Operator y Rest Parameters
-// ... sirve para copiar, combinar o expandir arrays y objetos.
-// Ejecuta este ejemplo con: node 4-spread-operator.js
+/*
+  Paso 4 - Spread Operator y Rest Parameters
+  Objetivo: entender cómo copiar, combinar y expandir datos sin mutar el original.
+  El spread es clave para crear nuevos objetos o arreglos en React cuando se actualiza
+  el estado o se construyen listas a partir de datos existentes.
+
+  Ejecuta este ejemplo con: node 4-spread-operator.js
+*/
 
 const cursosBase = ["HTML", "CSS"];
 const cursosCompletos = [...cursosBase, "JavaScript", "React"];

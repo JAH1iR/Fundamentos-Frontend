@@ -1,6 +1,8 @@
 /*
   Ejercicio 8 - Objetos, spread y serialización
-  Actualiza un objeto sin modificar el original y conviértelo a JSON.
+  Objetivo: actualizar un objeto sin mutar el original y convertirlo en JSON.
+  Este patrón es muy útil en React cuando se quiere cambiar el estado de una
+  aplicación sin alterar datos previos ni romper la inmutabilidad.
 */
 const usuario = {
   nombre: "Ana",

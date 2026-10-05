@@ -1,6 +1,11 @@
-// Paso 8 - Objetos y serialización
-// Los objetos representan datos complejos y en React casi todo es un objeto o un estado.
-// Ejecuta este ejemplo con: node 8-objetos-y-serializacion.js
+/*
+  Paso 8 - Objetos y serialización
+  Objetivo: entender cómo manejar datos complejos y convertirlos a JSON.
+  Los objetos representan el estado de la aplicación y la serialización permite guardar
+  o enviar esa información de forma segura y reutilizable.
+
+  Ejecuta este ejemplo con: node 8-objetos-y-serializacion.js
+*/
 
 const usuario = {
   nombre: "Ana",

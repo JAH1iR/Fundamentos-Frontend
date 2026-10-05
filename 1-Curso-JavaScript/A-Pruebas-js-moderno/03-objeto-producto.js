@@ -1,6 +1,9 @@
 /*
-  Ejercicio 3 - Objetos, propiedades y operador ternario
-  En JavaScript, un "arreglo asociativo" se representa con un objeto.
+  Ejercicio 3 - Objetos y propiedades de un producto
+  Objetivo: aprender a trabajar con objetos y a consultar sus propiedades.
+  Aquí representamos un producto con nombre, precio, stock y una bandera que
+  indica si requiere receta. Luego se usa un ternario para mostrar un mensaje
+  según el valor de esa propiedad.
 
   Ejecuta con: node 03-objeto-producto.js
 */

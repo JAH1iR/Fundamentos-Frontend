@@ -9,6 +9,11 @@ Repositorio de apoyo para el aprendizaje de HTML, CSS, JavaScript y fundamentos 
 * **B-JavaScript-Moderno**: introducción a ES6+, sintaxis moderna y conceptos clave para prepararse para React.
 * **C-React-fundamentos**: bases para entender patrones, componentes y lógica reactiva desde JavaScript.
 
+### Siguiente nivel recomendado
+1. Completa la secuencia de ejercicios de la carpeta A, desde 01 hasta 13.
+2. Revisa los ejemplos de ES6+ de B antes de avanzar a React.
+3. Usa el ejercicio integrador 13 como puente entre JavaScript y componentes.
+
 ### 2. 2-Guias-del-profesor
 * **1-html-semantico**: ejemplos de estructura HTML semántica, formularios, media y maquetación.
 * **2-html-conectores-JavaScript**: archivos HTML que conectan teoría con ejemplos de JavaScript.

@@ -1,6 +1,11 @@
-// Paso 2 - Desestructuración
-// Te permite extraer valores de objetos y arrays con menos código.
-// Ejecuta este ejemplo con: node 2-desestructuracion.js
+/*
+  Paso 2 - Desestructuración
+  Objetivo: extraer datos de objetos y arrays de forma rápida y clara.
+  Este patrón ayuda a reducir código repetitivo y es muy común cuando se reciben props
+  o se trabajan con estructuras de datos complejas en React.
+
+  Ejecuta este ejemplo con: node 2-desestructuracion.js
+*/
 
 const usuario = {
   nombre: "María",

@@ -1,6 +1,8 @@
 /*
   Ejercicio 9 - Promesas y async/await
-  Simula una petición que tarda un momento en responder.
+  Objetivo: simular una petición asíncrona y aprender a esperar su respuesta.
+  En aplicaciones reales esto representa llamadas a APIs. Con async/await el
+  flujo se vuelve más legible y fácil de mantener, y try/catch ayuda a manejar errores.
 */
 const esperar = (milisegundos) =>
   new Promise((resolve) => {
